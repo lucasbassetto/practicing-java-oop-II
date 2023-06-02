@@ -1,4 +1,4 @@
-package br.com.account;
+package br.com.account.conta;
 
 public class EnviadorDeNotificacao {
 
