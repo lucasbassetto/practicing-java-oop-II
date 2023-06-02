@@ -10,7 +10,6 @@ public class Conta {
         subtrairValor(valor);
         adicionarExtrato(valor);
         fazerProcessoContabil();
-        imprimirComprovante();
     }
 
     private void fazerProcessoContabil() {
@@ -31,9 +30,5 @@ public class Conta {
 
     private void subtrairValor(BigDecimal valor) {
 
-    }
-
-    private void imprimirComprovante() {
-        System.out.println("Debito efetuado com sucesso");
     }
 }
