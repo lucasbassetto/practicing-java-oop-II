@@ -6,10 +6,7 @@ public class Pix {
 
     public void enviarPix(Conta conta, BigDecimal valor, String chavePix) {
         verificarChavePix(chavePix);
-        conta.verificarSaldo();
-        conta.subtrairValor(valor);
-        conta.fazerProcessoContabil();
-        conta.imprimirComprovante();
+        conta.debito(valor);
     }
 
     public boolean verificarChavePix(String chavePix) {

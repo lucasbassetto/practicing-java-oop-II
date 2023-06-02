@@ -13,27 +13,27 @@ public class Conta {
         imprimirComprovante();
     }
 
-    public void fazerProcessoContabil() {
+    private void fazerProcessoContabil() {
 
     }
 
-    public void adicionarExtrato(BigDecimal valor) {
+    private void adicionarExtrato(BigDecimal valor) {
 
     }
 
-    public boolean verificarSaldo() {
+    private boolean verificarSaldo() {
         return true;
     }
 
-    public boolean verificarLogin() {
+    private boolean verificarLogin() {
         return true;
     }
 
-    public void subtrairValor(BigDecimal valor) {
+    private void subtrairValor(BigDecimal valor) {
 
     }
 
-    public void imprimirComprovante() {
+    private void imprimirComprovante() {
         System.out.println("Debito efetuado com sucesso");
     }
 }
