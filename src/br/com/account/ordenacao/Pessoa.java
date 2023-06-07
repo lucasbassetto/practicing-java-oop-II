@@ -1,11 +1,15 @@
 package br.com.account.ordenacao;
 
+import java.time.LocalDate;
+
 public class Pessoa implements Comparable {
 
     private String nome;
+    private LocalDate dataDeNascimento;
 
-    public Pessoa(String nome) {
+    public Pessoa(String nome, LocalDate dataDeNascimento) {
         this.nome = nome;
+        this.dataDeNascimento = dataDeNascimento;
     }
 
     @Override
