@@ -1,14 +1,34 @@
 package br.com.account.ordenacao;
 
 import java.time.LocalDate;
+import java.util.Comparator;
 
 public class Pessoa implements Comparable {
+
+    public static final Comparator<Pessoa> COMPARADOR_POR_NOME = Comparator.comparing(Pessoa::getNome);
+
 
     private String nome;
     private LocalDate dataDeNascimento;
 
     public Pessoa(String nome, LocalDate dataDeNascimento) {
         this.nome = nome;
+        this.dataDeNascimento = dataDeNascimento;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public LocalDate getDataDeNascimento() {
+        return dataDeNascimento;
+    }
+
+    public void setDataDeNascimento(LocalDate dataDeNascimento) {
         this.dataDeNascimento = dataDeNascimento;
     }
 
