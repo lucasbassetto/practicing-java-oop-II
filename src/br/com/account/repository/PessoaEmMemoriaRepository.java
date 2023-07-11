@@ -20,12 +20,19 @@ public class PessoaEmMemoriaRepository implements Repository {
 
     @Override
     public void atualizar(Pessoa pessoa) {
-
+       if(consultar(pessoa.getCpf()) == null) {
+           throw new IllegalArgumentException("Não existe pessoa cadastrada com esse CPF");
+       }
+        deletar(pessoa);
+        salvar(pessoa);
     }
 
     @Override
     public void deletar(Pessoa pessoa) {
-
+        if(consultar(pessoa.getCpf()) == null) {
+            throw new IllegalArgumentException("Não existe pessoa cadastrada com esse CPF");
+        }
+        dados.remove(pessoa);
     }
 
     @Override
@@ -40,6 +47,6 @@ public class PessoaEmMemoriaRepository implements Repository {
 
     @Override
     public List<Pessoa> listaTodos() {
-
+        return dados;
     }
 }
